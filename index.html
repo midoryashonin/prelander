@@ -144,10 +144,107 @@ h1 strong{
   color:#9ca3af;
 }
 
+/* ADD THIS TO CSS */
+
+.timerbox{
+margin-bottom:20px;
+text-align:center;
+}
+
+.timer-title{
+font-size:14px;
+font-weight:700;
+margin-bottom:12px;
+color:#111827;
+}
+
+.timer{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
+
+.time{
+width:72px;
+background:#f3f4f6;
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 0;
+}
+
+.time span{
+display:block;
+font-size:28px;
+font-weight:800;
+line-height:1;
+color:#111827;
+}
+
+.time small{
+font-size:11px;
+font-weight:600;
+color:#6b7280;
+}
+
+.dots{
+font-size:28px;
+font-weight:800;
+color:#111827;
+margin-top:-6px;
+}
+
+.comments{
+margin-top:26px;
+}
+
+.comment{
+background:#f9fafb;
+border:1px solid #ececec;
+border-radius:18px;
+padding:16px;
+margin-bottom:14px;
+}
+
+.comment-top{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:12px;
+}
+
+.avatar{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#dddddd;
+flex-shrink:0;
+}
+
+.name{
+font-size:15px;
+font-weight:800;
+color:#111827;
+margin-bottom:2px;
+}
+
+.stars{
+font-size:13px;
+letter-spacing:1px;
+color:#f5b301;
+}
+
+.comment-text{
+font-size:14px;
+line-height:1.55;
+color:#374151;
+}
+
 @media(max-width:360px){
   .page{padding:20px 22px 26px;}
   h1{font-size:21px;}
 }
+  
 </style>
 </head>
 
@@ -304,4 +401,30 @@ Dies ist eine unabhängige Promotion-Seite. Die abgebildete Marke ist weder Vera
 </div>
 
 </body>
+  <!-- ADD THIS SCRIPT BEFORE </body> -->
+
+<script>
+
+let totalTime = 180;
+
+const countdown = setInterval(() => {
+
+let minutes = Math.floor(totalTime / 60);
+let seconds = totalTime % 60;
+
+document.getElementById("minutes").innerHTML =
+String(minutes).padStart(2,'0');
+
+document.getElementById("seconds").innerHTML =
+String(seconds).padStart(2,'0');
+
+totalTime--;
+
+if(totalTime < 0){
+clearInterval(countdown);
+}
+
+},1000);
+
+</script>
 </html>
