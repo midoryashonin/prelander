@@ -3,325 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samsung S24 Ultra</title>
+<title>Samsung S24 Ultra Aktion</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
 
 body{
-font-family:Inter,Arial,sans-serif;
-background:#fff;
-color:#111827;
+  background:#fff;
+  color:#111827;
 }
 
 .page{
-max-width:420px;
-margin:0 auto;
-padding:22px 26px 28px;
+  max-width:420px;
+  margin:0 auto;
+  padding:22px 26px 28px;
 }
 
 h1{
-font-size:24px;
-line-height:1.22;
-font-weight:400;
-text-align:center;
-margin-bottom:22px;
-color:#111827;
+  text-align:center;
+  font-size:23px;
+  line-height:1.25;
+  font-weight:300;
+  margin-bottom:20px;
+  color:#1f2937;
 }
 
 h1 strong{
-font-weight:800;
+  font-weight:800;
 }
 
-.product-grid{
-display:grid;
-grid-template-columns:1.05fr .95fr;
-gap:6px;
-border-radius:9px;
-overflow:hidden;
-margin-bottom:24px;
+.product{
+  width:100%;
+  border-radius:9px;
+  overflow:hidden;
+  background:#f7f7f7;
+  margin-bottom:24px;
 }
 
-.product-main,
-.product-side{
-background:#f6f6f6;
+.product img{
+  width:100%;
+  display:block;
 }
 
-.product-main{
-grid-row:span 2;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:16px 8px;
+.card{
+  border-top:1px solid #e5e7eb;
+  border-bottom:1px solid #e5e7eb;
+  padding:22px 0;
+  margin-bottom:22px;
 }
 
-.product-main img{
-width:100%;
-height:100%;
-object-fit:cover;
+.card h2{
+  font-size:17px;
+  font-weight:700;
+  margin-bottom:14px;
 }
 
-.product-side img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+.row{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:14px;
 }
-
-.color-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-margin:0 25px 28px;
-}
-
-.color-card{
-height:88px;
-border:1px solid #d1d5db;
-border-radius:8px;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-gap:8px;
-font-size:12px;
-color:#111827;
-background:white;
-}
-
-.color-card.active{
-border:2px solid #2684ff;
-}
-
-.dot{
-width:36px;
-height:36px;
-border-radius:50%;
-}
-
-.violet{background:linear-gradient(#ebe9f4 0%,#46475c 50%,#1f2235 100%)}
-.black{background:linear-gradient(#e5e5e5 0%,#565656 50%,#222 100%)}
-.yellow{background:linear-gradient(#fff7d8 0%,#f1dc9c 55%,#fff7d8 100%)}
-.gray{background:linear-gradient(#eee 0%,#8a867d 55%,#c8c2b8 100%)}
-
-.status-box{
-border:1px solid #e5e7eb;
-border-radius:10px;
-padding:14px;
-margin-bottom:22px;
-background:#fafafa;
-}
-
-.status-row{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:13px;
-font-weight:600;
-color:#374151;
-margin-bottom:10px;
-}
-
-.status-row:last-child{margin-bottom:0}
 
 .icon{
-width:18px;
-height:18px;
-stroke:#2684ff;
-stroke-width:2;
-fill:none;
-stroke-linecap:round;
-stroke-linejoin:round;
-flex-shrink:0;
+  width:22px;
+  height:22px;
+  flex-shrink:0;
+  margin-top:1px;
+  color:#2388ff;
 }
 
-.form-title{
-font-size:16px;
-font-weight:800;
-margin-bottom:18px;
+.row p{
+  font-size:14px;
+  line-height:1.45;
+  color:#374151;
 }
 
-.label{
-font-size:13px;
-font-weight:700;
-margin-bottom:14px;
-}
-
-.radio-row{
-display:flex;
-gap:14px;
-margin-bottom:18px;
-font-size:14px;
-align-items:center;
-}
-
-.radio{
-display:flex;
-align-items:center;
-gap:7px;
-}
-
-.circle{
-width:22px;
-height:22px;
-border:1px solid #b7bcc4;
-border-radius:50%;
-}
-
-.input{
-width:100%;
-border:none;
-border-bottom:1px solid #aeb4bd;
-padding:13px 6px 9px;
-font-size:14px;
-margin-bottom:10px;
-outline:none;
-color:#111827;
+.row p strong{
+  color:#111827;
 }
 
 .notice{
-display:flex;
-align-items:flex-start;
-gap:8px;
-margin:18px 0 24px;
-font-size:13px;
-font-weight:800;
-line-height:1.35;
-text-align:left;
-}
-
-.notice .icon{
-stroke:#111827;
-margin-top:1px;
+  text-align:center;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.45;
+  margin:22px 0;
 }
 
 .cta{
-display:block;
-width:100%;
-background:#2684ff;
-color:#fff;
-text-align:center;
-text-decoration:none;
-border-radius:8px;
-padding:17px;
-font-size:16px;
-font-weight:800;
-border:none;
-box-shadow:none;
+  display:block;
+  width:100%;
+  background:#2388ff;
+  color:#fff;
+  text-align:center;
+  text-decoration:none;
+  padding:16px;
+  border-radius:7px;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:.3px;
+  transition:.15s;
 }
 
 .cta:active{
-transform:scale(.99);
+  transform:scale(.98);
+}
+
+.small{
+  margin-top:16px;
+  text-align:center;
+  font-size:12px;
+  color:#6b7280;
+  line-height:1.45;
 }
 
 .footer{
-border-top:1px solid #e5e7eb;
-margin:30px -26px 0;
-padding:20px 26px 0;
-text-align:center;
-font-size:11px;
-line-height:1.45;
-color:#9ca3af;
+  border-top:1px solid #e5e7eb;
+  margin-top:28px;
+  padding-top:22px;
+  text-align:center;
+  font-size:11px;
+  color:#9ca3af;
+  line-height:1.45;
 }
 
 .links{
-display:flex;
-justify-content:center;
-gap:22px;
-margin-top:12px;
-font-size:11px;
-color:#9ca3af;
+  margin-top:13px;
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  font-size:11px;
+  color:#9ca3af;
 }
 
-@media(min-width:700px){
-.page{max-width:720px}
-.layout{
-display:grid;
-grid-template-columns:1fr .9fr;
-gap:42px;
-align-items:start;
-}
-h1{font-size:30px}
-.product-grid{margin-bottom:20px}
-.color-grid{margin:0 8px}
+@media(max-width:360px){
+  .page{padding:20px 22px 26px;}
+  h1{font-size:21px;}
 }
 </style>
 </head>
 
 <body>
 
-<main class="page">
+<div class="page">
 
-<h1>Nur für kurze Zeit! Das brandneue <strong>Samsung S24 Ultra!</strong></h1>
+<h1>
+Nur für kurze Zeit! Das brandneue <strong>Samsung S24 Ultra</strong>!
+</h1>
 
-<div class="layout">
-
-<section>
-<div class="product-grid">
-<div class="product-main">
-<img src="https://i.postimg.cc/rwWR4GpR/gray.jpg" alt="Samsung S24 Ultra Titanium Gray">
-</div>
-<div class="product-side">
-<img src="https://i.postimg.cc/rwWR4GpR/gray.jpg" alt="Samsung S24 Ultra Detail">
-</div>
-<div class="product-side">
-<img src="https://i.postimg.cc/rwWR4GpR/gray.jpg" alt="Samsung S24 Ultra Kamera">
-</div>
+<div class="product">
+  <img src="https://i.postimg.cc/rwWR4GpR/gray.jpg" alt="Samsung S24 Ultra">
 </div>
 
-<div class="color-grid">
-<div class="color-card"><div class="dot violet"></div>Titanium Violet</div>
-<div class="color-card"><div class="dot black"></div>Titanium Black</div>
-<div class="color-card"><div class="dot yellow"></div>Titanium Yellow</div>
-<div class="color-card active"><div class="dot gray"></div>Titanium Gray</div>
-</div>
-</section>
+<div class="card">
 
-<section>
+<h2>Teilnahme prüfen:</h2>
 
-<div class="status-box">
-<div class="status-row">
-<svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-Aktionsseite für iPhone-Nutzer geöffnet
-</div>
-<div class="status-row">
-<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-Teilnahmefenster endet in <span id="timer">04:59</span>
-</div>
-<div class="status-row">
-<svg class="icon" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
-Sichere Weiterleitung zur Teilnahme
-</div>
+<div class="row">
+<svg class="icon" viewBox="0 0 24 24" fill="none">
+<path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<p><strong>Samsung S24 Ultra</strong> Titanium Gray verfügbar.</p>
 </div>
 
-<div class="form-title">Gewinn-Daten eingeben:</div>
-
-<div class="label">Anrede</div>
-
-<div class="radio-row">
-<div class="radio"><div class="circle"></div>Frau</div>
-<div class="radio"><div class="circle"></div>Herr</div>
+<div class="row">
+<svg class="icon" viewBox="0 0 24 24" fill="none">
+<path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+</svg>
+<p>Kurze Teilnahme über die offizielle Aktionsseite.</p>
 </div>
 
-<input class="input" placeholder="Vorname">
-<input class="input" placeholder="Nachname">
-<input class="input" placeholder="E-Mail">
+<div class="row">
+<svg class="icon" viewBox="0 0 24 24" fill="none">
+<path d="M4 4H20V16H5.5L4 18V4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+<path d="M8 8H16M8 12H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+<p>Wichtig: Teilnahme anschließend per E-Mail bestätigen.</p>
+</div>
+
+</div>
 
 <div class="notice">
-<svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg>
-<span>Wichtig: Zur Teilnahme Email in Ihrem Postfach bestätigen!</span>
+Klicken Sie auf „WEITER“, um zur Aktionsseite zu gelangen.
 </div>
 
-<a class="cta" href="YOUR_CPA_LINK_HERE">WEITER</a>
+<a class="cta" href="YOUR_CPA_LINK_HERE">
+WEITER
+</a>
 
-</section>
-
+<div class="small">
+Die Verfügbarkeit kann je nach Region und Teilnahmezeit variieren.
 </div>
 
 <div class="footer">
-Dies ist ein Gewinnspiel. Die abgebildete Marke ist weder Veranstalter noch Sponsor dieses Gewinnspiels und steht mit dieser Aktion in keiner geschäftlichen Beziehung.
+Dies ist eine unabhängige Promotion-Seite. Die abgebildete Marke ist weder Veranstalter noch Sponsor dieser Aktion.
+
 <div class="links">
 <span>Impressum</span>
 <span>AGB</span>
@@ -329,19 +213,7 @@ Dies ist ein Gewinnspiel. Die abgebildete Marke ist weder Veranstalter noch Spon
 </div>
 </div>
 
-</main>
-
-<script>
-let total=299;
-setInterval(()=>{
-total--;
-if(total<=0) total=299;
-let m=Math.floor(total/60);
-let s=total%60;
-document.getElementById("timer").textContent=
-String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
-},1000);
-</script>
+</div>
 
 </body>
 </html>
