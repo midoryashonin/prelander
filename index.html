@@ -314,7 +314,7 @@ Angebot endet in:
 <div class="dots">:</div>
 
 <div class="time">
-<span id="seconds">00</span>
+<span id="seconds">29</span>
 <small>Sek</small>
 </div>
 </div>
@@ -340,7 +340,7 @@ Die Verfügbarkeit kann je nach Region und Teilnahmezeit variieren.
 <div class="comment">
 
 <div class="comment-top">
-<div class="avatar"> <img class="img" src="https://i.postimg.cc/Xv85NT4s/congerdesign-kittens-3535404-1920.jpg" alt="Samsung S24 Ultra"></div>
+<div class="avatar"> <img class="img" src="https://i.postimg.cc/9Qc8xH8P/gianing-sexy-girl-3767275.jpg" alt="Samsung S24 Ultra"></div>
 
 <div>
 <div class="name">Lena M.</div>
@@ -361,7 +361,7 @@ Am Anfang dachte ich, es wäre fake 😅 aber ich habe wirklich eine Versandbest
 <div class="comment">
 
 <div class="comment-top">
-<div class="avatar"> <img class="img" src="https://i.postimg.cc/9Qc8xH8P/gianing-sexy-girl-3767275.jpg" alt="Samsung S24 Ultra"></div>
+<div class="avatar"> <img class="img" src="https://i.postimg.cc/Xv85NT4s/congerdesign-kittens-3535404-1920.jpg" alt="Samsung S24 Ultra"></div>
 
 <div>
 <div class="name">David K.</div>
@@ -418,26 +418,26 @@ Dies ist eine unabhängige Promotion-Seite. Die abgebildete Marke ist weder Vera
 
 <script>
 
-let totalTime = 300;
+let totalTime = 329;
 
 const countdown = setInterval(() => {
 
-let minutes = Math.floor(totalTime / 60);
-let seconds = totalTime % 60;
+const minutes = Math.floor(totalTime / 60);
+const seconds = totalTime % 60;
 
-document.getElementById("minutes").innerHTML =
-String(minutes).padStart(2,'0');
+document.getElementById("minutes").textContent =
+String(minutes).padStart(2, '0');
 
-document.getElementById("seconds").innerHTML =
-String(seconds).padStart(2,'0');
+document.getElementById("seconds").textContent =
+String(seconds).padStart(2, '0');
 
-totalTime--;
-
-if(totalTime < 0){
+if (totalTime <= 0) {
 clearInterval(countdown);
 }
 
-},1000);
+totalTime--;
+
+}, 1000);
 
 </script>
   <body>
