@@ -1,263 +1,369 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samsung S24 Ultra Aktion</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>Samsung S24 Ultra Gewinnspiel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
 body{
-background:linear-gradient(180deg,#f8fafc,#eef2ff);
-color:#0f172a;
+background:#f3f4f6;
+color:#111;
+overflow-x:hidden;
 }
-.page{max-width:520px;margin:auto;padding:14px 14px 34px}
-.alert{
-background:#0f172a;color:white;text-align:center;
-padding:11px;border-radius:0 0 18px 18px;
-font-size:13px;font-weight:800;letter-spacing:.2px
+
+.topbar{
+width:100%;
+background:#111;
+padding:10px;
+text-align:center;
+font-size:14px;
+font-weight:600;
+color:white;
 }
-.hero{
-margin-top:16px;background:white;border-radius:30px;
-padding:22px;box-shadow:0 18px 45px rgba(15,23,42,.12);
-position:relative;overflow:hidden
+
+.wrapper{
+max-width:480px;
+margin:auto;
+padding:14px;
 }
-.hero:before{
-content:"";position:absolute;width:180px;height:180px;
-background:#dbeafe;border-radius:50%;right:-70px;top:-60px
+
+.badge{
+display:inline-block;
+background:#16a34a;
+color:white;
+padding:7px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:700;
+margin-top:12px;
+animation:pulse 1.3s infinite;
 }
-.tag{
-display:inline-flex;align-items:center;gap:7px;
-background:#dcfce7;color:#166534;
-padding:8px 13px;border-radius:999px;
-font-size:12px;font-weight:900;position:relative;z-index:2
-}
-h1{
-font-size:31px;line-height:1.05;margin-top:16px;
-font-weight:900;letter-spacing:-1.2px;position:relative;z-index:2
-}
-h1 span{color:#2563eb}
-.subtitle{
-margin-top:12px;color:#475569;font-size:15.5px;
-line-height:1.55;font-weight:500;position:relative;z-index:2
-}
-.product{
-margin-top:20px;border-radius:26px;overflow:hidden;
-background:#f8fafc;border:1px solid #e2e8f0;position:relative
-}
-.product img{width:100%;display:block}
-.float{
-position:absolute;top:12px;left:12px;background:#ef4444;
-color:white;padding:7px 12px;border-radius:999px;
-font-size:12px;font-weight:900;box-shadow:0 8px 18px rgba(239,68,68,.35)
-}
-.card{
-margin-top:14px;background:#fff7ed;border:1px solid #fed7aa;
-border-radius:20px;padding:14px;text-align:center;
-font-weight:800;color:#9a3412;font-size:14px
-}
-.timer{
-display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px
-}
-.time{
-background:#111827;color:white;border-radius:20px;
-padding:14px;text-align:center
-}
-.time b{font-size:30px;display:block}
-.time small{font-size:11px;opacity:.75;font-weight:700}
-.steps{
-margin-top:18px;display:grid;gap:10px
-}
-.step{
-background:white;border-radius:18px;padding:14px;
-display:flex;align-items:center;gap:12px;
-box-shadow:0 8px 20px rgba(15,23,42,.06);
-border:1px solid #e5e7eb
-}
-.num{
-width:32px;height:32px;border-radius:50%;
-background:#2563eb;color:white;display:flex;
-align-items:center;justify-content:center;
-font-weight:900;flex-shrink:0
-}
-.step strong{font-size:14px}
-.step p{font-size:12.5px;color:#64748b;margin-top:3px}
-.cta{
-margin-top:20px;width:100%;display:block;text-align:center;
-background:linear-gradient(135deg,#2563eb,#1d4ed8);
-color:white;text-decoration:none;padding:19px;
-border-radius:22px;font-size:20px;font-weight:900;
-box-shadow:0 16px 32px rgba(37,99,235,.35);
-animation:pulse 1.6s infinite
-}
+
 @keyframes pulse{
-0%,100%{transform:scale(1)}
-50%{transform:scale(1.025)}
+0%{transform:scale(1);}
+50%{transform:scale(1.04);}
+100%{transform:scale(1);}
 }
-.trust{
-margin-top:13px;text-align:center;color:#64748b;
-font-size:12.5px;font-weight:700
+
+h1{
+font-size:34px;
+line-height:1.1;
+font-weight:800;
+margin-top:16px;
 }
-.social{
-margin-top:22px
+
+.sub{
+margin-top:12px;
+font-size:16px;
+line-height:1.5;
+color:#555;
 }
-.social h3{
-font-size:18px;margin-bottom:12px;font-weight:900
+
+.phonebox{
+margin-top:24px;
+background:white;
+border-radius:28px;
+padding:14px;
+box-shadow:0 8px 30px rgba(0,0,0,0.08);
+position:relative;
+overflow:hidden;
 }
+
+.phonebox img{
+width:100%;
+border-radius:18px;
+display:block;
+}
+
+.live{
+position:absolute;
+top:16px;
+left:16px;
+background:red;
+color:white;
+padding:6px 12px;
+border-radius:30px;
+font-size:12px;
+font-weight:700;
+}
+
+.stock{
+margin-top:16px;
+background:#fff7ed;
+border:2px solid #fdba74;
+padding:14px;
+border-radius:18px;
+font-weight:700;
+font-size:15px;
+color:#9a3412;
+text-align:center;
+}
+
+.countdown{
+margin-top:18px;
+display:flex;
+justify-content:center;
+gap:10px;
+}
+
+.timebox{
+background:#111;
+color:white;
+padding:14px;
+border-radius:18px;
+width:78px;
+text-align:center;
+}
+
+.timebox span{
+display:block;
+font-size:28px;
+font-weight:800;
+}
+
+.timebox small{
+font-size:12px;
+opacity:.8;
+}
+
+.features{
+margin-top:24px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.feature{
+background:white;
+padding:16px;
+border-radius:18px;
+display:flex;
+align-items:center;
+gap:12px;
+font-size:15px;
+font-weight:600;
+box-shadow:0 4px 14px rgba(0,0,0,0.05);
+}
+
+.check{
+width:28px;
+height:28px;
+border-radius:50%;
+background:#16a34a;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:800;
+flex-shrink:0;
+}
+
+.cta{
+margin-top:28px;
+display:block;
+width:100%;
+background:#2563eb;
+color:white;
+text-align:center;
+padding:20px;
+font-size:21px;
+font-weight:800;
+border-radius:22px;
+text-decoration:none;
+box-shadow:0 8px 25px rgba(37,99,235,.35);
+transition:.2s;
+}
+
+.cta:hover{
+transform:scale(1.02);
+}
+
+.people{
+margin-top:18px;
+text-align:center;
+font-size:14px;
+color:#555;
+font-weight:600;
+}
+
+.comments{
+margin-top:28px;
+}
+
 .comment{
-background:white;border:1px solid #e5e7eb;border-radius:18px;
-padding:14px;margin-bottom:10px;box-shadow:0 8px 18px rgba(15,23,42,.05)
+background:white;
+padding:16px;
+border-radius:18px;
+margin-bottom:14px;
+box-shadow:0 4px 14px rgba(0,0,0,0.05);
 }
-.comment-top{display:flex;align-items:center;gap:10px;margin-bottom:7px}
-.avatar{
-width:34px;height:34px;border-radius:50%;
-background:linear-gradient(135deg,#c7d2fe,#bfdbfe);
-display:flex;align-items:center;justify-content:center;
-font-weight:900;color:#1e3a8a
+
+.comment .name{
+font-weight:800;
+font-size:15px;
+margin-bottom:6px;
 }
-.name{font-size:14px;font-weight:900}
-.verified{font-size:11px;color:#16a34a;font-weight:800}
-.text{font-size:13.5px;line-height:1.45;color:#475569}
+
+.comment .text{
+font-size:14px;
+line-height:1.5;
+color:#444;
+}
+
 .footer{
-text-align:center;margin-top:22px;color:#94a3b8;font-size:11px;line-height:1.5
+margin-top:30px;
+padding-bottom:30px;
+font-size:12px;
+color:#888;
+text-align:center;
+line-height:1.6;
 }
-.sticky{
-position:sticky;bottom:10px;z-index:99;margin-top:18px
-}
-.sticky a{
-display:block;text-align:center;background:#16a34a;color:white;
-padding:16px;border-radius:20px;text-decoration:none;
-font-weight:900;font-size:17px;
-box-shadow:0 14px 30px rgba(22,163,74,.35)
-}
+
 </style>
 </head>
 
 <body>
 
-<div class="alert">🇦🇹 Exklusive Österreich Aktion für iPhone Nutzer</div>
-
-<div class="page">
-
-<section class="hero">
-
-<div class="tag">● Teilnahme aktuell geöffnet</div>
-
-<h1>Erhalten Sie die Chance auf ein <span>Samsung S24 Ultra</span></h1>
-
-<p class="subtitle">
-Beantworten Sie eine kurze Teilnahmefrage und prüfen Sie, ob Sie für diese Samsung S24 Ultra Aktion qualifiziert sind.
-</p>
-
-<div class="product">
-<div class="float">HEUTE AKTIV</div>
-<img src="https://i.postimg.cc/rwWR4GpR/gray.jpg" alt="Samsung S24 Ultra Titanium Gray">
+<div class="topbar">
+🇦🇹 Offizielle Samsung Österreich Aktion
 </div>
 
-<div class="card">
-⚠️ Hohe Nachfrage: Teilnahmefenster endet in wenigen Minuten
+<div class="wrapper">
+
+<div class="badge">
+LETZTE CHANCE 2026
 </div>
 
-<div class="timer">
-<div class="time"><b id="min">04</b><small>MINUTEN</small></div>
-<div class="time"><b id="sec">59</b><small>SEKUNDEN</small></div>
+<h1>
+Gewinnen Sie ein brandneues Samsung S24 Ultra!
+</h1>
+
+<div class="sub">
+Samsung verlost heute kostenlose Geräte an ausgewählte iPhone Nutzer in Österreich.
 </div>
 
-<a class="cta" href="YOUR_CPA_LINK_HERE">JETZT TEILNAHME PRÜFEN</a>
+<div class="phonebox">
 
-<div class="trust">🔒 Sichere Weiterleitung · Keine Zahlung auf dieser Seite</div>
-
-</section>
-
-<section class="steps">
-
-<div class="step">
-<div class="num">1</div>
-<div>
-<strong>Teilnahme starten</strong>
-<p>Klicken Sie auf den Button und öffnen Sie die Aktionsseite.</p>
-</div>
+<div class="live">
+LIVE
 </div>
 
-<div class="step">
-<div class="num">2</div>
-<div>
-<strong>Daten bestätigen</strong>
-<p>Geben Sie Ihre Teilnahmeinformationen korrekt ein.</p>
-</div>
+<img src="https://i.postimg.cc/rwWR4GpR/gray.jpg">
+
 </div>
 
-<div class="step">
-<div class="num">3</div>
-<div>
-<strong>E-Mail prüfen</strong>
-<p>Bestätigen Sie Ihre Teilnahme direkt in Ihrem Postfach.</p>
-</div>
+<div class="stock">
+⚠️ Nur noch 3 Geräte verfügbar in Ihrer Region
 </div>
 
-</section>
+<div class="countdown">
 
-<section class="social">
-<h3>Aktuelle Reaktionen</h3>
+<div class="timebox">
+<span id="m">04</span>
+<small>Min</small>
+</div>
+
+<div class="timebox">
+<span id="s">59</span>
+<small>Sek</small>
+</div>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+<div class="check">✓</div>
+Samsung S24 Ultra Titanium Gray – 512GB
+</div>
+
+<div class="feature">
+<div class="check">✓</div>
+Nur für iPhone Nutzer verfügbar
+</div>
+
+<div class="feature">
+<div class="check">✓</div>
+Kostenlose Lieferung in Österreich
+</div>
+
+</div>
+
+<a class="cta" href="YOUR_CPA_LINK_HERE">
+JETZT TEILNEHMEN
+</a>
+
+<div class="people">
+🔥 27 Personen nehmen gerade teil
+</div>
+
+<div class="comments">
 
 <div class="comment">
-<div class="comment-top">
-<div class="avatar">L</div>
-<div>
-<div class="name">Lena M.</div>
-<div class="verified">Verifizierte Teilnahme</div>
+<div class="name">Julia M.</div>
+<div class="text">
+Ich dachte zuerst es wäre fake 😭 Habe gerade meine Bestätigung bekommen!
 </div>
-</div>
-<div class="text">Sehr einfache Teilnahme. Die Seite war auf Deutsch und hat auf dem iPhone perfekt funktioniert.</div>
-</div>
-
-<div class="comment">
-<div class="comment-top">
-<div class="avatar">M</div>
-<div>
-<div class="name">Markus H.</div>
-<div class="verified">Vor wenigen Minuten</div>
-</div>
-</div>
-<div class="text">Das Titanium Gray sieht brutal gut aus. Habe meine Teilnahme gerade bestätigt.</div>
 </div>
 
 <div class="comment">
-<div class="comment-top">
-<div class="avatar">S</div>
-<div>
-<div class="name">Sarah K.</div>
-<div class="verified">Aus Österreich</div>
+<div class="name">Daniel K.</div>
+<div class="text">
+Das neue Titanium Gray sieht unglaublich aus 🔥
 </div>
-</div>
-<div class="text">Ging schnell. Wichtig: E-Mail danach wirklich bestätigen.</div>
 </div>
 
-</section>
+<div class="comment">
+<div class="name">Sophie R.</div>
+<div class="text">
+Endlich gewonnen 😍 Versand soll 2 Tage dauern.
+</div>
+</div>
 
-<div class="sticky">
-<a href="YOUR_CPA_LINK_HERE">✅ Teilnahme jetzt prüfen</a>
 </div>
 
 <div class="footer">
-Diese Seite ist eine unabhängige Promotion-Seite und steht in keiner Verbindung zu Apple oder Samsung Electronics.  
-Teilnahmebedingungen gelten auf der nächsten Seite.
+Diese Aktion steht in keiner Verbindung zu Apple oder Samsung Electronics.<br><br>
+© 2026 Promo Österreich
 </div>
 
 </div>
 
 <script>
-let total = 299;
+
+let seconds = 299;
+
 setInterval(()=>{
-total--;
-if(total <= 0) total = 299;
-let m = Math.floor(total / 60);
-let s = total % 60;
-document.getElementById("min").textContent = String(m).padStart(2,"0");
-document.getElementById("sec").textContent = String(s).padStart(2,"0");
+
+seconds--;
+
+let m = Math.floor(seconds / 60);
+let s = seconds % 60;
+
+document.getElementById("m").innerHTML =
+String(m).padStart(2,'0');
+
+document.getElementById("s").innerHTML =
+String(s).padStart(2,'0');
+
+if(seconds <= 0){
+seconds = 299;
+}
+
 },1000);
+
 </script>
 
 </body>
